@@ -1,0 +1,21 @@
+$def with(clip)
+
+<html> <head> <title>Jam Social Audio</title> </head> <body>
+<h1>Audio clip</h1>
+<img src='$(clip.user().icon)' width='200' height='200'>
+<audio controls>
+    <source src="/download/$(clip.digest).mp3" type="audio/mp3">
+    Your browser does not support HTML5 audio.
+</audio>
+<ul>
+    <li>User: $clip.user().name</li>
+    <li>Recorded: $clip.rtime</li>
+    <li>Submitted: $clip.stime</li>
+    <li>Digest: $clip.digest</li>
+    <li>Download:
+          <a href="/download/$(clip.digest).mp3">mp3</a>
+        | <a href="/download/$(clip.digest).wav">wav</a></li>
+    </li>
+</ul>
+</body>
+</html>

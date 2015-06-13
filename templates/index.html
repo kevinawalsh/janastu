@@ -1,0 +1,28 @@
+$def with(clips)
+
+<html>
+<head>
+<title>Jam Social Audio</title>
+</head>
+<body>
+<h1>All clips [ ${len(clips)} ]</h1>
+<ol>
+$for clip in clips:
+    <li>
+    <div style='display: inline-block; vertical-align: top;'>
+    <a href="/listen/$clip.digest"><img src='$(clip.user().icon)' width=64 height=64></a>
+    </div>
+    <div style='display: inline-block; vertical-align: top;'>
+    <a href="/listen/$clip.digest">Audio</a>
+    recorded by $(clip.user().name) on $(clip.rtime)
+    <br>
+    <small>
+    submitted on $clip.stime
+    <br>
+    [ $clip.digest ]
+    </small>
+    </div>
+    </li>
+</ol>
+</body>
+</html>
