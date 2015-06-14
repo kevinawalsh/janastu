@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Raspberry Jam Social Audio Client
+Exec=sudo /home/pi/jamclient.py
+Icon=/home/pi/record.gif
+Terminal=true
+Type=Application
+
